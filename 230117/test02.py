@@ -3,7 +3,7 @@ order_list = orders.split(',')
 iceNum = 0
 order_dict = {}
 for order in order_list:
-    if(order.find('아이스') == False):
+    if(order.find('아이스') != -1):
         iceNum += 1
     if(order_dict.get(order) == None):
         order_dict[order] = 1
@@ -11,5 +11,5 @@ for order in order_list:
         order_dict[order] += 1
     
 print(f'아이스 음료 주문은 {iceNum}건 들어왔습니다.')
-for order in order_dict:
-    print(f'{order} : {order_dict[order]}개')
+for order_name, order_num in order_dict.items():
+    print(f'{order_name} : {order_num}개')
