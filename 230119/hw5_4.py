@@ -16,12 +16,10 @@ def fn_d(n):
         n = n // 10
     return result
 
+# n이 셀프넘버이면 True, 아니면 False 반환
 def is_selfnumber(n):
     for i in range(n):
         if(fn_d(i) == n):
             return False
     else:
         return True
-
-for _ in range(5):
-    print(is_selfnumber(int(input())))
