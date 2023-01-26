@@ -7,13 +7,11 @@ def check(target_str):
     for char in target_str:
         if char.isdecimal():
             dec_num += 1
-            continue
         elif char.isalpha():
             alpha_num += 1
-            continue
         else:
             other += 1
-    return f'숫자 : {dec_num}개 문자 : {alpha_num}개 기호 : {other}개'
+    return f'숫자 : {dec_num}개, 문자 : {alpha_num}개, 기호 : {other}개'
             
 target = '숫자3개, 문자9개, 기호4개'
 print(check(target))
