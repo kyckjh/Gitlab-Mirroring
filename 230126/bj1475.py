@@ -11,12 +11,14 @@ for n in N:
                 lst.remove(9)
             except:
                 lst += [0,1,2,3,4,5,6,7,8,9]
+                lst.remove(6)
                 set_num += 1
         elif n == 9:
             try:
                 lst.remove(6)
             except:
                 lst += [0,1,2,3,4,5,6,7,8,9]
+                lst.remove(9)
                 set_num += 1
         else:
             lst += [0,1,2,3,4,5,6,7,8,9]
