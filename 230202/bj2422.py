@@ -16,14 +16,14 @@ for i in range(1, N - 1):
     for j in range(i + 1, N):
         for k in range(j + 1, N + 1):
             #print([i, j, k])
-            set.add((i, j, k))
+            num_set.add((i, j, k))
 
 for i in range(1, N + 1):
     a, b = nopes[i][0], nopes[i][1]
     if i != nopes[i][0] or i != nopes[i][1]:
         add_lst = [a, b, i]
         add_lst.sort()
-        num_set -= tuple(add_lst)
+        num_set = num_set - tuple(add_lst)  # set에서 set을 빼자
                       
 print(len(num_set))
 
