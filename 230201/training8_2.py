@@ -4,7 +4,7 @@ class Person:
         self.age = age
         
     @classmethod
-    def get_age(self, name, year):
+    def get_age(cls, name, year):
         # 입력받은 이름과 23년 기준 나이를 가진 Person 인스턴스 반환
         return Person(name, 2023 - year)    
     

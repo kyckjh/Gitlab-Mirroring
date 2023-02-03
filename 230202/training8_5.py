@@ -23,12 +23,16 @@ class Column:   # 기둥
     def __str__(self):
         return self.name
 
+def move_disk(start, end, middle):
+    pass
+
 def hanoi(diskNum, name1, name2, name3):
     source = Column(name1)
     middle = Column(name3)
     destination = Column(name2)
     for i in range(1, diskNum + 1):
         source.disk_in(Disk(i))
+    
 
 # 예시 
 hanoi(3, 'A', 'C', 'B')

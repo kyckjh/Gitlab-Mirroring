@@ -1,7 +1,6 @@
-def ar(arr):
-    arr = [1,2,3]
-    return arr
-    
-arr = [1]
-arr += ar(arr)
-print(arr)
+lst = [1,2,3,4,5]
+print(lst)
+print(lst.pop())
+print(lst)
+lst.append(5)
+print(lst)
