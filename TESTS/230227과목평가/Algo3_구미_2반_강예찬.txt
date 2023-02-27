@@ -1,0 +1,15 @@
+문제 3
+
+(1)
+# 중위순회는 왼쪽자식 -> 자신 -> 오른쪽 자식 순서로 방문한다.
+def inoder(v):      # 이진 트리를 중위 순회하는 함수
+    if v == None:   # 방문했는데 자식이 없었을 경우
+        return      # 아무것도 하지 않음
+    inoder(v.left)  # v의 왼쪽 자식 먼저 방문
+    print(v)        # v의 이름 출력
+    inoder(v.right) # v의 오른쪽 자식 방문
+
+
+(2)
+중위순회 B A D C E
+후위순회 B D E C A
