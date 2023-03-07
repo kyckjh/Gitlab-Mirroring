@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="데일리 실습_web_01_3_P.css">
+<html>
+  <!-- 1 : orange
+  요소선택자의 color가 orange이다. -->
+  <p>1</p> 
+  <!-- 2 : blue
+  요소선택자가 orange이지만 우선순위가 더 높은 class의 color가 blue이다.-->
+  <p class="blue">2</p> 
+  <!-- 3, 4 : green
+  class에 blue와 green이 모두 포함되어 있지만 소스(css파일)에서
+  green이 나중에 선언되었으므로 둘다 green이다. -->
+  <p class="blue green">3</p> 
+  <p class="green blue">4</p>
+  <!-- 5 : red
+  요소선택자(orange), 클래스(blue)보다 id선택자의 우선순위가 더 높으므로 red이다. -->
+  <p id="red" class="blue">5</p> 
+  <!-- 6 : darkviolet
+  요소선택자가 darkviolet이고 class는 blue, id선택자는 red이지만
+  요소선택자에 !important가 포함되어 가장 우선순위가 높으므로
+  darkviolet이다. -->
+  <h2 id="red" class="blue">6</h2> 
+  <!-- 7 : yellow
+  class, id선택자보다 inline style이 더 우선순위가 높으므로 yellow이다. -->
+  <p id="red" class="blue" style="color: yellow;">7</p> 
+  <!-- 8 : darkviolet 
+  class, id선택자, inline style 보다 h2의 요소선택자에 포함된
+  !important의 우선순위가 더 높으므로 darkviolet이다. -->
+  <h2 id="red" class="blue" style="color: yellow;">8</h2> 
+</html>

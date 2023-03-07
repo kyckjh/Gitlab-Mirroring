@@ -1,0 +1,21 @@
+h1 {
+  color: red;
+}
+.blue-text {
+  color: blue;
+}
+.italic-text{
+  font-style: italic;
+}
+#greeting{
+  border: 10px dotted violet;
+}
+.red-text{
+  color: red;
+}
+#green{
+  color:green;
+}
+.border-box{
+  border: 20px dodgerblue dotted;
+}

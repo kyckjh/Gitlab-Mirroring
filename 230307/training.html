@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <link rel="stylesheet" href="style.css">
+    <a href="https://www.ssafy.com/">
+      <img src="ssafy.png" alt="main img" width="300">
+    </a>
+    <h1 id="greeting">SSAFY 학생 건강설문</h1>
+  </header>
+  <section>
+    <form action="#">
+      <!-- 이름 -->
+      <div>
+        <label class="blue-text italic-text" for="name">이름을 기재해주세요.</label><br>
+        <input type="text" name="name" id="name" autofocus>
+      </div>
+      <hr>
+      <!-- 지역 -->
+      <div>
+        <label class="blue-text italic-text" for="region">지역을 선택해주세요.</label><br />
+        <select name="region" id="region" required>
+          <option value="서울">서울</option>
+          <option value="대전">대전</option>
+          <option value="광주">광주</option>
+          <option value="구미" selected>구미</option>
+          <option value="부울경">부울경</option>
+        </select>
+      </div>
+      <hr>
+      <!-- 체온 -->
+      <div>
+        <p class="blue-text italic-text">오늘의 체온을 선택해주세요.</p>
+        <input type="radio" name="body-heat" id="normal" value="normal" checked>
+        <label style="color: blueviolet;" for="normal">37도 미만</label><br>
+        <input type="radio" name="body-heat" id="warning" value="warning">
+        <label style="font-weight: bold; color:crimson" for="warning">37도 이상</label>
+      </div>      
+      <hr>
+      <input type="submit" value="제출">
+      <h1 class="red-text"> 어떤게 선택될까요? </h1>
+      <h1 style="color:aqua" class="red-text"> 어떤게 선택될까요? </h1>
+      <h1 id="green" class="red-text"> 어떤게 선택될까요? </h1>
+    </form>
+  </section>
+  <footer>
+    Google 설문지를 통해 비밀번호를 제출하지 마시오.
+  </footer>
+</body>
+</html>

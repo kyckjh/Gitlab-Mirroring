@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- get을 통해 입력값을 [name]=[입력값] 형태의 문자열로 받기 -->
+  <form method="get">
+    <!-- label 태그를 이용해 "username"이라는 id를 가지는 요소에 focusing 되도록 함-->
+    <label for="username">USERNAME : </label>
+    <!-- value로 입력 칸에 문자 표시, name으로 입력값 받기-->
+    <input type="text" value="아이디를 입력 해 주세요" id="username" name="username"><br>
+    <label for="pwd">PWD : </label>
+    <input type="password" id="pwd" name="pwd">
+    <input type="submit" value="로그인">
+  </form>
+</body>
+</html>
