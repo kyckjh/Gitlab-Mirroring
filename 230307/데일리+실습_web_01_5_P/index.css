@@ -1,0 +1,35 @@
+.logo-ssafy{
+  width: 100px;
+}
+.header-ssafy{
+  background-color: black;
+}
+.btn{
+  position:absolute;
+  padding: 10px;
+  right:5px;
+}
+.bottom{
+  height: 30px;
+  text-align: center;
+}
+.text-bottom{
+  position: relative;
+  font-size: 20px;
+  line-height: 100px;
+}
+.mul_logo{
+  height: 100%;
+}
+.mob_logo{
+  height: 100%;
+}
+.logo-left{
+  display: inline;
+  right:100px;
+  height: 100%;
+}
+.logo-right{
+  display: inline;
+  height: 100%;
+}

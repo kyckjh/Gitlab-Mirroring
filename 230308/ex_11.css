@@ -1,0 +1,36 @@
+.my-class{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 100px;
+  height: 100px;
+}
+.box{
+  background-color: aquamarine;
+  width: 100px;
+  height: 100px;
+
+  /* margin-top: 20px; */
+  /* margin-right: auto;
+  margin-left: auto; */
+
+  margin: 20px auto;
+
+  text-align: center;
+
+  display:inline;
+}
+
+span{
+  line-height: 100px;
+}
+
+.none{
+  display: none;
+}
+.hidden{
+  visibility: hidden;
+}
