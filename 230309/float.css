@@ -1,0 +1,10 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  margin-right: 20px;
+}
+
+.left {
+  float: left;
+}
