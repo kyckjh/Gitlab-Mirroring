@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>반갑습니다 저는 Article Index 입니다.</h1>
+<!-- herf=""에 아무것도 안쓰면 현재 경로(url)에서 시작 -->
+<!-- articles/index/ -->
+<!-- pages/index를 요청해야 함 -->
+<!-- 맨 앞에 /를 붙이면 root 경로를 나타냄 -->
+<!-- <a href="/pages/index/">Page Index로 이동</a> -->
+<a href="{% url 'pages:index' %}"> Page Index로 이동</a>
+
+<h1> 이름 : {{ name }} </h1>
+
+<h1> 점수 : {{ score }} </h1>
+
+{% endblock content %}
+
