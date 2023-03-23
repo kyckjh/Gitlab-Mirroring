@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>새 글 작성하기</h1>
+<!-- 사용자에게 입력받을 수 있는 화면 출력 -->
+<form action="{% url 'articles:create' %}" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <hr><hr>
+  {{ form.as_p }}
+
+  <p>
+    <input type="submit" value="작성하기">
+  </p>
+</form>
+{% endblock content %}
+

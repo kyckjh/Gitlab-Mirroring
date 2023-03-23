@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>새 글 작성하기</h1>
+<!-- 사용자에게 입력받을 수 있는 화면 출력 -->
+<form action="{% url 'articles:create' %}" method="POST">
+  {% csrf_token %}
+  <p>
+    <label for="title">제목 : </label>
+    <input type="text" id="title" name="title">
+  </p>
+  
+  <p>
+    <label for="content">내용 : </label>
+    <textarea name="content" id="content" cols="30" rows="10" style="color:grey; font-size:10px;">
+...내용을 입력하세요</textarea>
+  </p>
+
+  <p>
+    <input type="submit" value="작성하기">
+  </p>
+</form>
+{% endblock content %}
+

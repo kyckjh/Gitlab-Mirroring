@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<hr>
+<h1>INDEX</h1>
+<hr>
+<a href="{% url "articles:create" %}">글쓰기</a>
+<hr>
+<br>
+{% for article in articles %}
+ {{ forloop.counter }} : <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
+<hr>
+{% endfor %}
+{% endblock content %}

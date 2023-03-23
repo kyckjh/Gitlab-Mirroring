@@ -1,24 +1,17 @@
 import sys
-sys.setrecursionlimit(10**9)
-
-stars = [['*', '*', '*'], ['*', ' ', '*'], ['*', '*', '*']]
-blanks = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
+sys.setrecursionlimit(10**7)
 
 def star(y, x, blank, n):
     if n == 3:
         if blank:
-            ans[y//3][x//3] = stars
-            # for i in range(3):
-            #     for j in range(3):
-            #         if i==1 and j==1:
-            #             ans[y+i][x+j] = False
-            #         else:
-            #             ans[y+i][x+j] = True
+            for i in range(3):
+                if i==1:
+                    ans[y][x+i] = '***'
+                else:
+                    ans[y][x+i] = '* *'
         else:
-            ans[y//3][x//3] = blanks
-            # for i in range(3):
-            #     for j in range(3):
-            #         ans[y+i][x+j] = False
+            for i in range(3):
+                ans[y][x+i] = '   '
         return
     n //= 3
     if blank:
@@ -29,26 +22,29 @@ def star(y, x, blank, n):
                 else:
                     star(y + n*i, x + n*j, 1, n)
     else:
-        for i in range(3):
-            for j in range(3):
-                star(y + n*i, x + n*j, 0, n)
+        for i in range(3*n):
+            for j in range(3*n):
+                ans[y+i][x+j] = '   '
 
 N = int(sys.stdin.readline())
-N //= 3
-ans = [[0]*N for _ in range(N)]
-for i in range(3):
-    for j in range(3):
-        if i == 1 and j == 1:
-            star(N*i, N*j, 0, N)
-        else:
-            star(N*i, N*j, 1, N)
+N //= 9
+ans = [['']*N for _ in range(N)]
+ans2 = [' ']*N
 
-for i in range(N):
-    result = [[], [], []]
-    for j in range(N):
-        for a in range(3):
-            result[a].append(ans[i][j][a])
-    for j in range(3):
-        for k in range(3):
-            print("".join(result[j][k]), end='')
-    print()
+# f(N)
+
+star(0, 0, 1, N)
+
+
+for i in range(3):
+    if i == 1:
+        for k in range(N):
+            print("".join(ans[k]), end='')
+            print("".join(ans2), end='')
+            print("".join(ans[k]), end='')
+            print()
+    else:
+        for k in range(N):
+            for l in range(3):
+                print("".join(ans[k]), end='')
+            print()
