@@ -1,0 +1,32 @@
+[
+{
+    "model": "articles.article",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "title": "user2 title",
+        "content": "user2 content",
+        "image": "�ٿ�ε�_1.jpg",
+        "created_at": "2023-04-12T00:08:02.303Z",
+        "updated_at": "2023-04-12T00:08:02.304Z",
+        "like_users": [
+            1
+        ]
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "title": "user1 title",
+        "content": "user1 content",
+        "image": "�ٿ�ε�_2.jpg",
+        "created_at": "2023-04-12T00:09:04.019Z",
+        "updated_at": "2023-04-12T00:09:04.019Z",
+        "like_users": [
+            1
+        ]
+    }
+}
+]

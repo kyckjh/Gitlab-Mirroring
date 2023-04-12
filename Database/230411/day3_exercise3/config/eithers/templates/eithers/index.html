@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+  <h1>INDEX</h1>
+  <a href="{% url 'eithers:create' %}">작성하기</a>
+  <hr />
+
+  {% for question in questions %}
+    <p>
+      {{question.id}}번 이슈
+      <h3>{{question.title}}</h3>
+      <a href="{% url 'eithers:detail' question.pk %}" id="question-content">DETAIL</a>
+
+    </p>
+    <hr />
+  {% endfor %} 
+
+{% endblock content %}
