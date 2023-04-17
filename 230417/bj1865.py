@@ -16,5 +16,5 @@ for _ in range(TC):
         S, E, T = map(int, input().split())
         lst[S].append((T, E))
     dis = [float("inf")]*(N+1)
-    for i in range(N):
+    for i in range(N):        
         f(i)
