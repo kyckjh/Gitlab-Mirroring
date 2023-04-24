@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .done{
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <form action="" id="todoForm">
+    <input type="text" id="todoInput">
+    <input type="submit" value="ADD">
+  </form>
+  <ul id="todoList">
+
+  </ul>
+  <script>
+    const todoForm = document.querySelector("#todoForm")
+    const todoInput = document.querySelector("#todoInput")
+    const todoList = document.querySelector("#todoList")
+
+    todoForm.addEventListener('submit', function() {
+      //alert("Submit Event!!!")
+      //alert(todoInput.value)
+      const li = document.createElement("li")
+      li.innerText = todoInput.value
+      todoList.appendChild(li)
+      li.addEventListener('click', function() {
+        li.classList.toggle('done')
+      })
+      event.preventDefault()
+    })
+
+  </script>
+</body>
+</html>
