@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btnCat">고양이</button>  
+  <p><img src="" alt="고양이" id="imgCat"></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+    const btn = document.querySelector("#btnCat")
+    const img = document.querySelector("#imgCat")
+
+    function getCatImage() {
+      axios({
+        method: 'get',       
+        url: 'https://api.thecatapi.com/v1/images/search',
+      })
+      .then((response)=>{
+        console.log(response.data[0])
+        img.setAttribute("src", response.data[0].url)
+      })
+    }
+
+    btn.addEventListener("click", getCatImage)
+    window.onload = getCatImage
+  </script>
+</body>
+</html>
