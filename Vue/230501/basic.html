@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red-text {
+      color:red;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="app">
+    <div> {{ msg }}</div>
+    <button v-on:click="func1">눌러봐!!</button>
+    <p v-text="msg"></p>
+    <p v-html="msg"></p>
+    <p v-show="isActive">이 글이 보이나요?</p>
+    <p v-if="isActive">이 글이 보이나요?</p>
+    <div v-for="word in words" v-bind:key="word.id">
+      <p>{{ word.id }} : {{ word.value }}</p>
+    </div>
+
+    <p :class="{redText:isActive}">빨간 글씨</p>
+    <p v-bind:class="redText">빨간 글씨</p>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        msg: '<h1>Hello world!</h1>',
+        isActive: false,
+        words: [
+          {id:1, value:'apple'},
+          {id:2, value:'banana'},
+          {id:3, value:'kiwi'},
+        ],
+        redText: 'red-text',
+      },
+      methods: {
+        func1 : function(){
+          this.isActive = !this.isActive
+        },
+        func2() {
+          alert('Hello! 22222')
+        },
+      }
+    })
+  </script>
+</body>
+</html>
